@@ -1,0 +1,33 @@
+As streaming is increasingly being adopted by users, online media players have become essential for consuming media on the internet. Music players allow one to enjoy music in any browser and supports a lot of the features of an offline music player.
+We will be creating a music player with a clean user interface that can be used to play music in the browser. We will also implement features like seeking and volume control. HTML has several methods in the HTMLMediaElement interface that can be used to play audio files and control its playback without using any other library.
+We will start by creating the HTML layout first that defines the structure of the player, make it look good by styling using CSS and then write the player logic for all the functions in JavaScript.
+ 
+
+The HTML Layout 
+The HTML layout defines the element structure that would be shown on the page. The player can be divided into the following portions:
+ 
+
+Details Portion: This section shows the details of the current track being played. It includes the track number, track album, track name and track artist.
+Buttons Portion: This section shows the buttons that are used to control the playback of the track. It includes the play/pause button, the previous and next track buttons. They would have an onclick() method that calls a specific function defined in the JavaScript file.
+Sliders Portion: This section contains the seek slider and volume slider that can be used to control the playback and volume.
+We will be using FontAwesome icons to get the icons for all the buttons used on the page. The custom CSS and JavaScript we will write later is also linked in the file.
+
+
+The CSS Styling 
+Using CSS we can style the different portions to make it more visually appealing: 
+ 
+
+The flex layout is used to arrange the various elements of the player and align them to the middle of the page.
+The track art image is given a fixed dimension and made rounded using the border-radius property.
+The two sliders have been modified from their default look by using the appearance property. The height and background are changed to suit the color scheme. They are also given slight transparency that smoothly transitions to the full opacity using the transition property.
+All the playback controls have their cursor property set so that it changes to a pointer whenever the mouse hovers over it.
+ The result of the HTML layout and CSS styling would give the following appearance:
+ 
+
+html_css_output
+
+JavaScript logic of the player:
+The logic of the player is defined in the JavaScript file. There are several functions that work together to handle all the functions of the player.
+Step 1: Defining all the variables and accessing the HTML elements 
+The required elements in the HTML layout that are to be dynamically changed are first selected using the querySelector() method. They are then assigned variable names so that they could be accessed and modified. Other variables that would be accessed throughout the program are also defined.
+ 
